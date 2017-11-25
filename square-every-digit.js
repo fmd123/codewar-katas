@@ -1,0 +1,18 @@
+function squareDigits(num){
+  string = num.toString()
+ var arr = string.split("");
+ var doubleArr = arr.map((char)=>{
+   var renum = parseInt(char)
+   return renum*renum;
+
+ })
+ return parseInt(doubleArr.join(''))
+
+}
+
+//7 kyu
+// Welcome. In this kata, you are asked to square every digit of a number.
+//
+// For example, if we run 9119 through the function, 811181 will come out.
+//
+// Note: The function accepts an integer and returns an integer
