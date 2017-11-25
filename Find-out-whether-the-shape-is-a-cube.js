@@ -1,3 +1,6 @@
+//8kyu
+//getting server error 500 when I try to submit to codewars. add this later.
+
 //Find out whether the shape is a cube
 // To find the volume (centimeters cubed) of a cuboid you use the formula:
 //
