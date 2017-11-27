@@ -15,7 +15,6 @@ function makeNegative(num) {
 // someone else's solution
 //works because -0 === 0;
 //take absolute value of num and make negative.
-
 // function makeNegative(num) {
 //   return -Math.abs(num);
 // }
