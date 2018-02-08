@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>training JS 16</title>
+</head>
+
+<body>
+
+  <script>
+//https://codepen.io/fmd123/pen/wygPPY?editors=0011
+  //I was going nuts on this one...
+  //https://stackoverflow.com/questions/7486085/copying-array-by-value-in-javascript
+  //https://stackoverflow.com/questions/32620447/why-arryas-sort-method-sorts-all-other-arrays-that-are-linked-to-the-one-declare
+
+  //use.slice to create an entirely new array. Fixed! :-)  Very cool
+
+  console.log ("..................................")
+    function cutIt(arr) {
+      console.log(`arr: ${arr}`)
+      //var beSorted = arr; doesn't work because .sort mutates both beSorted AND arr (pass by reference vs pass by copying-array-by-value-in-javascript)
+      var beSorted = arr.slice();
+      console.log(`beSorted: ${beSorted}`)
+      console.log(`arr: ${arr}`)
+      beSorted.sort((a, b) => {
+        return a.length - b.length;
+      })
+      console.log(`arr becomes sorted by length after beSorted is sorted... why? ${arr}`)
+      console.log(`beSorted: ${beSorted}`)
+
+      var shortest = beSorted[0].length
+      console.log(shortest)
+      var str = "";
+      var newArr = [];
+      for (var i = 0; i < arr.length; i++) {
+        str = arr[i]
+        newArr.push(str.substr(0, shortest))
+
+      }
+      console.log(`arr ${arr}`)
+      console.log(`newArr ${newArr}`)
+      return newArr;
+    }
+
+    // function cutIt(arr) {
+    //   console.log(`arr: ${arr}`)
+    //   var beSorted = arr;
+    //   console.log(`beSorted: ${beSorted}`)
+    //   console.log(`arr: ${arr}`)
+    //   var ordered = beSorted.sort((a, b) => {
+    //     return a.length - b.length;
+    //   })
+    //   console.log(`arr becomes sorted by length after beSorted is sorted... why? ${arr}`)
+    //   console.log(`beSorted: ${beSorted}`)
+    //   console.log (`ordered ${ordered}`);
+    //   var shortest = ordered[0].length
+    //   console.log(shortest)
+    //   var str = "";
+    //   var newArr = [];
+    //   for (var i = 0; i < arr.length; i++) {
+    //     str = arr[i]
+    //     newArr.push(str.substr(0, shortest))
+    //
+    //   }
+    //   console.log(`arr ${arr}`)
+    //   console.log(`newArr ${newArr}`)
+    // }
+
+    cutIt(["codewars","javascript","java"])
+
+  </script>
+
+</body>
+
+</html>
