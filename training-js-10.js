@@ -7,7 +7,7 @@ function pickIt(arr){
   }
   return [odd,even];
 }
-//even better:
+//even better with for in loop:
 // function pickIt (arr) {
 //
 //   let odd = []
