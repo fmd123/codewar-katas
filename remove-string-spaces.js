@@ -6,3 +6,4 @@ function noSpace(x){
 //Instructions: Simple, remove the spaces from the string, then return the resultant string.
 
 //https://stackoverflow.com/questions/6623231/remove-all-white-spaces-from-text
+// \s is for spaces and g is for global or all.  then replace with no space ''
