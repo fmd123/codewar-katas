@@ -4,5 +4,5 @@ function stringClean(s){
 }
 
 //or: return s.replace(/\d/g '');
-//which is shorter code but not as explicit.
-//on other hand simply use stringClean() as a variable to represent the new string.
+//which is shorter code.
+//stringClean() as a variable to represent the new string.
